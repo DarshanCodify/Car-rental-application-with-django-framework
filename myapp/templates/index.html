@@ -1,0 +1,251 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <script src="{% static 'files/last.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'under/style.css'%}">
+    <script src="https://kit.fontawesome.com/5d70bcf54f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+   
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="static/under/fortuner.webp" alt=""></a>
+
+        <div class="bx bx-mean" id="mean-icon"></div>
+        
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+        <div class="header-btn">
+            <a href="signup" class="sign up">Sign Up</a>
+          
+
+            <a href="login" class="login in">login In</a>
+        </div>
+        
+    </header>
+    <section class="home" id="home">
+        <div class="text">
+            <h1><span>Looking</span> to <br>rent a car</h1>
+            <p>Welcome to our premier car rental application. Whether you're planning a road trip, need a temporary vehicle while yours is in the shop, or simply want to explore a new city with convenience, our app has you covered.</p>
+            <p>Your journey starts here. Download the app today and unlock a world of possibilities on the road.</p>
+            <div class="app-stores">
+                <img src="static/under/play.png" alt="" height="30" width="100">      
+            </div>
+        </div>
+       
+        <div class="form-container">
+            <form method="get" action="/search" id="searchForm">
+                <div class="input-box">
+                    <span>Location</span>
+                    <input type="search" name="search" id="search" placeholder="Search Places">
+                </div>
+                <div class="input-box">
+                    <span>Pick Up Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="" id="">
+                </div>
+                <input type="submit" name="" id="" class="btn">
+            </form>
+        </div>
+    </section>
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How Its Work</span>
+            <h1>Rent With 3 Easy Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h2>Choose A Location</h2>
+                <p>Select your desired pickup location from our extensive network of rental partners across the globe. Whether you're flying into a new city or need a car close to home, we've got you covered.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-regular fa-calendar"></i>
+                <h2>Pick-Up Date</h2>
+                <p>Specify the dates you need the car for. Whether it's just for the day or an extended road trip, simply input your pickup and drop-off dates to find available vehicles that match your schedule.</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h2>Book  A Car</h2>
+                <p>Once you've chosen your location and selected your pickup date, browse through our inventory of cars and choose the one that best suits your needs and budget. With just a few clicks, you can confirm your reservation and get ready to hit the road in style.</p>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Out Top Deals <br> From Top Related Dealers</h1>
+        </div>
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="static/under/SWI.webp" alt="">
+                </div>
+                <p>2020</p>
+                <h3>Swift Dzire</h3>
+                <h2>38,880 <span>/month</span></h2>
+                
+                <a href="{% url 'car_detail_by_make' 'Maruthi Suzuki' %}" class="btn" >Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="static/under/XUV700.webp" alt="">
+                </div>
+                <p>2023</p>
+                <h3>Mahindra XUV700</h3>
+                <h2>56,200 <span>/month</span></h2>
+                <a href="{% url 'car_detail_by_make' 'MahindraXUV' %}" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="static/under/MAHI.jpg" alt="">
+                </div>
+                <p>2023</p>
+                <h3>Mahindra Scorpio</h3>
+                <h2>52,000 <span>/month</span></h2>
+                <a href="{% url 'car_detail_by_make' 'Mahindra' %}" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="static/under/innova.webp" alt="">
+                </div>
+                <p>2023</p>
+                <h3>Toyota Innova Crysta</h3>
+                <h2>53,600 <span>/month</span></h2>
+
+                <a href="{% url 'car_detail_by_make' 'Toyota' %}" class="btn" >Rent Now</a>
+
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="static/under/thar.webp" alt="">
+                </div>
+                <p>2023</p>
+                <h3>Mahindra Thar</h3>
+                <h2>42,800 <span>/month</span></h2>
+                <a href="{% url 'car_detail_by_make' 'MahindraThar' %}" class="btn">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="static/under/creta.webp" alt="">
+                </div>
+                <p>2022</p>
+                <h3>Hyundai Creta </h3>
+                <h2>48,000 <span>/month</span></h2>
+                <a href="{% url 'car_detail_by_make' 'Hyundai' %}" class="btn">Rent Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Best customer Experience</h1>
+        </div>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="static/under/fortuner.webp" alt="">
+            </div>
+            <div class="about-text">
+                <span>About Us</span>
+                <p>Welcome, your go-to destination for convenient and reliable vehicle rentals. We pride ourselves on offering a seamless and user-friendly platform that simplifies the process of renting a car for any occasion.</p>
+                <p>We understand the importance of flexibility and choice. Whether you need a compact car for a quick city trip, a spacious SUV for a family vacation, or a luxury vehicle for a special event, we've got you covered. With an extensive fleet of well-maintained vehicles from trusted brands, you can find the perfect ride to suit your needs and preferences.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <span>Reviews</span>
+            <h1>Whats Our Customer Says</h1>
+        </div>
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="static/under/person1.jpeg" alt="">
+                </div>
+                <h2>Rahul Rao</h2>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>The app interface was user-friendly, making it easy to browse through various car options and select the one that suited my needs. The pickup process was seamless, and the vehicle was in excellent condition. The return process was equally smooth, with no unexpected charges or issues. Overall, I highly recommend this app for anyone in need of a hassle-free car rental experience.</p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="static/under/person2.webp" alt="">
+                </div>
+                <h2>Mohith Patel</h2>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>This car rental application saved me both time and money on my recent business trip. I was able to quickly book a vehicle through the app, and the pricing was competitive compared to other rental services. The app provided all the necessary information, including pickup location and vehicle details, making the entire process incredibly convenient. The car was clean and well-maintained, and the return process was straightforward. </p>
+            </div>
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="static/under/person.jpeg" alt="">
+                </div>
+                <h2>Abhijeet Sharmar</h2>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p>I had an outstanding experience with this car rental application, primarily due to the exceptional customer service I received. When I encountered a minor issue with my reservation, the support team was quick to respond and resolve the issue efficiently. Their professionalism and willingness to assist went above and beyond my expectations. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h2>Subscribe To Newsletter</h2>
+        <div class="box">
+            <input type="text" placeholder="Enter Your Email..">
+            <a href="#" class="btn">Subscribe</a>
+        </div>
+    </section>
+     <div class="copyright">
+        <p>&#169; CarRentals All Right Reserved</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+     </div>
+
+
+</body>
+</html>

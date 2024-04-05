@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="GET" id="search_myForm">
+        {% csrf_token %}
+    <input type="search" name="search" id='search'>
+    <button type='submit'>submit</button>
+    
+    </form>
+    {% if results %}
+        <h2>Search Results for "{{ query }}"</h2>
+        <ul>
+        {% for item in results %}
+            <li>{{ item.title }}</li>  <!-- Adjust this based on your model fields -->
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+</body>
+</html>

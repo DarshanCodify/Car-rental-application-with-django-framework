@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{ 
+        width : 100%;
+        display : flex; 
+        flex-direction: column; 
+        justify-content : center; 
+        align-items center;
+       }
+      
+    </style>
+  </head>
+
+  <body>
+    <h1>{{ car.make }} {{ car.model }}</h1>
+    <p>Year: {{ car.year }}</p>
+    <p>Price: {{ car.price_per_day }}</p>
+    <p>mileage:{{car.mileage}}</p>
+    <p class="description">description:{{car.description}}</p>
+
+    <img src="{{ car.car_image_primary.url }}" alt="" width="500px" h />
+  </body>
+</html>
