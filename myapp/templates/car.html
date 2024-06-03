@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rent Now</title>
     <style>
       body{ 
         width : 100%;
@@ -12,17 +12,26 @@
         justify-content : center; 
         align-items center;
        }
-      
+     h1{
+        align-items:center;
+        display : flex; 
+        justify-content : center; 
+     }
+     .image{
+        display : flex; 
+        justify-content : center; 
+     }
     </style>
-  </head>
+</head>
 
   <body>
-    <h1>{{ car.make }} {{ car.model }}</h1>
-    <p>Year: {{ car.year }}</p>
-    <p>Price: {{ car.price_per_day }}</p>
-    <p>mileage:{{car.mileage}}</p>
-    <p class="description">description:{{car.description}}</p>
+    <h1>{{ car.make }} {{ car.model }} </h1>
+    <p>-->  Year: {{ car.year }}</p>
+    <p>-->  Price: {{ car.price_per_day }}</p>
+    <p>-->  mileage:{{car.mileage}}</p>
+    <p class="description">-->  Description:  {{car.description}}</p>
 
-    <img src="{{ car.car_image_primary.url }}" alt="" width="500px" h />
+    <img src="{{ car.car_image_primary.url }}" alt="centered image" class="image" width="500px" h />
   </body>
+</section>
 </html>

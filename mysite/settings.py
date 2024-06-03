@@ -31,7 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'jet',
+    'material',
+    'material.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -119,7 +122,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # settings.py
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'myapp/static'),
+]
 
+STATIC_ROOT= BASE_DIR/'static'
 
 
 

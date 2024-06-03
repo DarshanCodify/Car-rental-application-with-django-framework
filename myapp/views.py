@@ -65,10 +65,10 @@ def car_detail(request, car_id):
 def searching(request):
     query = request.GET.get('search')
     destination = request.GET.get('destination')
-    # start_date = request.GET.get('start_date')
-    # start_datetime = request.GET.get('start_datetime')
-    # end_date = request.GET.get('end_date')
-    # end_datetime = request.GET.get('end_datetime')
+    start_date = request.GET.get('start_date')
+    start_datetime = request.GET.get('start_datetime')
+    end_date = request.GET.get('end_date')
+    end_datetime = request.GET.get('end_datetime')
 
     results = Car.objects.all()
     if query:

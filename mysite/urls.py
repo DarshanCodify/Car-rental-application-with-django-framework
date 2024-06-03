@@ -15,11 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from myapp import views
 from django.conf import settings
 from django.conf.urls.static import static
+
+admin.site.site_header = "Car Rental Application"
+admin.site.site_title = "Welcome to dashbord"
+admin.site.index_title = "Welcome to this portal"
+
+
 urlpatterns = [
+    #path('jet/', include('jet.urls', 'jet')), 
     path('admin/', admin.site.urls),
     path('',views.index,name='index'),
     path('search/', views.searching, name='search'),
